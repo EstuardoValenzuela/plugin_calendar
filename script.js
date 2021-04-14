@@ -38,8 +38,11 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         eventClick: function(arg) {
                       var fecha = arg.event.start;
                       var title= arg.event.title;
+                      var description1 = arg.event.description;
                       $("#modalEventos").modal();
                       document.getElementById("fecha_inicio").value=fecha;  
+                     // document.getElementById("descripcion").value=description1;  
+                      document.getElementById("titulo").value=title;  
                       document.getElementById('Label1').innerHTML = title;
                       },
         editable: true,
@@ -47,8 +50,8 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
         events: [ //Los eventos se crean mediante archivos
                   {
                    title: 'All Day Event',
-                   start: '2020-09-01',
-                  description: 'This is a cool event'
+                   description: 'This is a cool event',
+                   start: '2020-09-01'
                   },
                   {
                   title: 'Long Event',
